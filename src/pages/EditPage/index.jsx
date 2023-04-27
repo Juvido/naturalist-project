@@ -1,10 +1,10 @@
-import { useState } from "react";
-import { api } from "../../assets/utils/api";
-import { useNavigate } from "react-router-dom";
+import { api } from "../../assets/utils/api.js";
+import { useEffect, useState } from "react";
+import { useParams, useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
 import style from "./style.module.css";
 
-export function CreatePost() {
+export function EditPage() {
   const [form, setForm] = useState({
     commonName: "",
     image: "",
@@ -12,19 +12,28 @@ export function CreatePost() {
     where: "",
   });
 
+  const { id } = useParams();
+
+  useEffect(() => {
+    async function fetchPost() {
+      const response = await api.get(`/inserts/${id}`);
+      setForm({ ...response.data.data.attributes });
+    }
+    fetchPost();
+  }, []);
+
   const navigate = useNavigate();
 
   function handleChange(e) {
     setForm({ ...form, [e.target.name]: e.target.value });
   }
-
+    
   async function handleSubmit(e) {
     e.preventDefault();
-
     try {
-      await api.post("/inserts", { data: { ...form } });
-
+      await api.put(`/inserts/${id}`, { data: form });
       navigate("/post");
+
     } catch (e) {
       console.log(e);
     }
@@ -35,7 +44,8 @@ export function CreatePost() {
       <Link to={"/"}>
         <p className={style.buttonHome}> Home </p>
       </Link>
-      <h2 className={style.createTitle}> Make your post:</h2>
+      <h2 className={style.editTitle}> Edit your post:</h2>
+
       <form onSubmit={handleSubmit}>
         <label>Common name:</label>
         <input

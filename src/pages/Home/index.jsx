@@ -15,6 +15,7 @@ export function Home() {
       <Link to={`/create`} className={style.buttonMake}>
         <p>Make your post</p>
       </Link>
+      
 
       <div className={style.divCard}>
             <Card 
