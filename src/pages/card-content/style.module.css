@@ -1,0 +1,20 @@
+.divContent {
+    background-color: rgba(245, 133, 72, 0.3);
+    height: 10em;
+    width: 15em;
+    border-radius: 1em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+}
+
+.cardTitle {
+    color: #344403;
+}
+
+.cardContent {
+    text-align: center;
+    color: #344403;
+}
