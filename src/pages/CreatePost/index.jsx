@@ -36,25 +36,33 @@ export function CreatePost() {
         <p className={style.buttonHome}> Home </p>
       </Link>
       <h2 className={style.createTitle}> Make your post:</h2>
-      <form onSubmit={handleSubmit}>
-        <label>Common name:</label>
-        <input
-          name="commonName"
-          value={form.commonName}
-          onChange={handleChange}
-        />
-        <label>Image link:</label>
-        <input name="image" value={form.image} onChange={handleChange} />
-        <label>Curiosity:</label>
-        <input
-          name="curiosity"
-          value={form.curiosity}
-          onChange={handleChange}
-        />
-        <label>Where you can find:</label>
-        <input name="where" value={form.where} onChange={handleChange} />
-
-        <button> Enter </button>
+      <form onSubmit={handleSubmit} className={style.formCreate}>
+        <div className={style.formItem}>
+          <label>Common name:</label>
+          <input
+            name="commonName"
+            value={form.commonName}
+            onChange={handleChange}
+          />
+        </div>
+        <div className={style.formItem}>
+          <label>Image link:</label>
+          <input name="image" value={form.image} onChange={handleChange} />
+        </div>
+        <div className={style.formItem}>
+          <label>Curiosity:</label>
+          <input
+            name="curiosity"
+            value={form.curiosity}
+            onChange={handleChange}
+            className={style.inputCuriosity}
+          />
+        </div>
+        <div className={style.formItem}>
+          <label>Where you can find:</label>
+          <input name="where" value={form.where} onChange={handleChange} />
+        </div>
+        <button className={style.buttonEnter}> Enter </button>
       </form>
     </>
   );

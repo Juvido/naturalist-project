@@ -1,18 +1,62 @@
 .buttonHome {
-    display: flex;
-    width: 7em;
-    height: 2em;
-    margin: 0.5em;
-    justify-content: center;
-    align-items: center;
-    border-radius: 0.6em;
-    color: #344403;
+  display: flex;
+  width: 7em;
+  height: 2em;
+  margin: 0.5em;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0.6em;
+  color: #344403;
 }
 
-.createTitle{
+.createTitle {
+  background-color: rgb(245, 133, 72, 0.7);
+  margin: 10px 0;
+  width: 100%;
+  font-weight: 500;
+  font-size: 2em;
+  color: #344403
+}
+
+.formCreate {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5em;
+}
+
+.formItem {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 0.5em;
+}
+
+input {
+  border-color: #496003;
+  height: 30px;
+  width: 40vw;
+  border-radius: 0.4em;
+}
+
+label {
+  color: #496003;
+  font-size: 20px;
+}
+
+.inputCuriosity {
+  height: 80px;
+}
+
+.buttonEnter{
     background-color: rgb(245, 133, 72, 0.7);
-    margin: 10px 0;
-    width: 100%;
+    color: #496003;
+    border: none;
+    border-radius: 0.4em;
+    width: 25vw;
+    height: 30px;
     font-weight: 500;
-    font-size: 2.0em;
+    font-size: 20px;
 }
