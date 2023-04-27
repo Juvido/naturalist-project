@@ -1,6 +1,8 @@
 import { useState } from "react";
 import { api } from "../../assets/utils/api";
 import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
+import style from "./style.module.css";
 
 export function CreatePost() {
   const [form, setForm] = useState({
@@ -30,7 +32,10 @@ export function CreatePost() {
 
   return (
     <>
-      <h2> Make your post:</h2>
+      <Link to={"/"}>
+        <p className={style.buttonHome}> Home </p>
+      </Link>
+      <h2 className={style.createTitle}> Make your post:</h2>
       <form onSubmit={handleSubmit}>
         <label>Common name:</label>
         <input

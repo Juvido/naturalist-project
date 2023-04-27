@@ -1,0 +1,18 @@
+.buttonHome {
+    display: flex;
+    width: 7em;
+    height: 2em;
+    margin: 0.5em;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0.6em;
+    color: #344403;
+}
+
+.createTitle{
+    background-color: rgb(245, 133, 72, 0.7);
+    margin: 10px 0;
+    width: 100%;
+    font-weight: 500;
+    font-size: 2.0em;
+}
