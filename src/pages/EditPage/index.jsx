@@ -10,6 +10,7 @@ export function EditPage() {
     image: "",
     curiosity: "",
     where: "",
+    when: "",
   });
 
   const { id } = useParams();
@@ -27,13 +28,12 @@ export function EditPage() {
   function handleChange(e) {
     setForm({ ...form, [e.target.name]: e.target.value });
   }
-    
+
   async function handleSubmit(e) {
     e.preventDefault();
     try {
       await api.put(`/inserts/${id}`, { data: form });
       navigate("/post");
-
     } catch (e) {
       console.log(e);
     }
@@ -46,25 +46,42 @@ export function EditPage() {
       </Link>
       <h2 className={style.editTitle}> Edit your post:</h2>
 
-      <form onSubmit={handleSubmit}>
-        <label>Common name:</label>
-        <input
-          name="commonName"
-          value={form.commonName}
-          onChange={handleChange}
-        />
-        <label>Image link:</label>
-        <input name="image" value={form.image} onChange={handleChange} />
-        <label>Curiosity:</label>
-        <input
-          name="curiosity"
-          value={form.curiosity}
-          onChange={handleChange}
-        />
-        <label>Where you can find:</label>
-        <input name="where" value={form.where} onChange={handleChange} />
+      <form onSubmit={handleSubmit} className={style.editCreate}>
+        <div className={style.editItem}>
+          <label>Common name:</label>
+          <input
+            name="commonName"
+            value={form.commonName}
+            onChange={handleChange}
+          />
+        </div>
 
-        <button> Enter </button>
+        <div className={style.editItem}>
+          <label>Image link:</label>
+          <input name="image" value={form.image} onChange={handleChange} />
+        </div>
+
+        <div className={style.editItem}>
+          <label>Curiosity:</label>
+          <input
+            name="curiosity"
+            value={form.curiosity}
+            onChange={handleChange}
+            className={style.editCuriosity}
+          />
+        </div>
+
+        <div className={style.editItem}>
+          <label>Where you can find:</label>
+          <input name="where" value={form.where} onChange={handleChange} />
+        </div>
+
+        <div className={style.editItem}>
+          <label>Created at:</label>
+          <input name="when" value={form.when} onChange={handleChange} />
+        </div>
+
+        <button className={style.buttonEnter}> Enter </button>
       </form>
     </>
   );

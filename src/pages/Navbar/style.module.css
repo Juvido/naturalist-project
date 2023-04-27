@@ -1,21 +1,19 @@
-
-
 .navbar {
-    display: flex;
-    background-color: #496003;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-    gap: 3em;
+  display: flex;
+  background-color: #496003;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  gap: 3em;
 }
 
 .iconLogo {
-    width: 10%;
-    color: #496003;
+  width: 5%;
+  color: #496003;
 }
 
 .text {
-    color: #F58548;
-    font-weight: 300;
-    font-size: 3em;
+  color: #f58548;
+  font-weight: 300;
+  font-size: 2.5em;
 }

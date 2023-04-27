@@ -10,6 +10,7 @@ export function CreatePost() {
     image: "",
     curiosity: "",
     where: "",
+    when: "",
   });
 
   const navigate = useNavigate();
@@ -36,6 +37,7 @@ export function CreatePost() {
         <p className={style.buttonHome}> Home </p>
       </Link>
       <h2 className={style.createTitle}> Make your post:</h2>
+
       <form onSubmit={handleSubmit} className={style.formCreate}>
         <div className={style.formItem}>
           <label>Common name:</label>
@@ -45,10 +47,12 @@ export function CreatePost() {
             onChange={handleChange}
           />
         </div>
+
         <div className={style.formItem}>
           <label>Image link:</label>
           <input name="image" value={form.image} onChange={handleChange} />
         </div>
+
         <div className={style.formItem}>
           <label>Curiosity:</label>
           <input
@@ -58,10 +62,17 @@ export function CreatePost() {
             className={style.inputCuriosity}
           />
         </div>
+
         <div className={style.formItem}>
           <label>Where you can find:</label>
           <input name="where" value={form.where} onChange={handleChange} />
         </div>
+
+        <div className={style.formItem}>
+          <label>Created at:</label>
+          <input name="when" value={form.when} onChange={handleChange} />
+        </div>
+        
         <button className={style.buttonEnter}> Enter </button>
       </form>
     </>

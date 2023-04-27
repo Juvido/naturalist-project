@@ -7,11 +7,9 @@ export function Home() {
     <div className={style.home}>
       <h1 className={style.title}>Naturalist</h1>
       <h4 className={style.content}>
-        {" "}
-        Identify species and discover curiosities{" "}
+        Identify species and discover curiosities
       </h4>
       <h3 className={style.content}>
-        {" "}
         Make your observations and share with us!
       </h3>
       <Link to={`/post`} className={style.buttonExplore}>

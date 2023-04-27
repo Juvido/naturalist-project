@@ -22,23 +22,43 @@ export function PostsList() {
 
   return (
     <>
-    <Link to={"/"} >
-        <p className={style.buttonHome}> Home </p>
+      <Link to={"/"} className={style.buttonHome}>
+        <p > Home </p>
       </Link>
+      
       <h2 className={style.listTitle}> Here you can find: </h2>
+      <div>
+      <Link to={`/create`} className={style.buttonCreate}>
+        <p> New post</p>
+      </Link>
+      <p className={style.notes}> *Click on the item for details </p>
+      </div>
       <div className={style.listGrid}>
-      {post.map((currentPost) => {
-        return (
-          <>
-          <div className={style.listItem} >
-            <Link to={`/post/${currentPost.id}`}>
-              <p key={currentPost.id} className={style.itemName}> {currentPost.attributes.commonName}</p>
-            </Link>
-            <img src={currentPost.attributes.image} className={style.image} />
-            </div>
-          </>
-        );
-      })}
+        {post.map((currentPost) => {
+          return (
+            <>
+              <table className={style.table}>
+                <tbody>
+                  <tr>
+                    <td className={style.cell}>
+                      <Link to={`/post/${currentPost.id}`} className={style.itemName}>
+                        <p key={currentPost.id} >
+                          {currentPost.attributes.commonName}
+                        </p>
+                      
+                      <img
+                        src={currentPost.attributes.image}
+                        className={style.image}
+                        
+                      />
+                      </Link>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </>
+          );
+        })}
       </div>
     </>
   );
