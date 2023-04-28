@@ -34,8 +34,9 @@
   gap: 0.5em;
 }
 
-input {
+input, textarea {
   border-color: #496003;
+  border: 2px solid;
   height: 30px;
   width: 40vw;
   border-radius: 0.4em;
@@ -48,6 +49,7 @@ label {
 
 .inputCuriosity {
   height: 80px;
+  border-color: #496003;
 }
 
 .buttonEnter{

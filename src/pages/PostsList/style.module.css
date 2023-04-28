@@ -32,9 +32,8 @@
 
 .table {
   margin-left: 10px;
-  border: 1px solid black;
+  border: 1px solid #505a33;
   table-layout: fixed;
-
   width: 95%;
   gap: 1em;
 }
@@ -42,7 +41,7 @@
 .cell {
   padding: 10px;
   text-align: center;
-  border: 1px solid black;
+  border: 1px solid #505a33;
 }
 
 .image {
@@ -54,4 +53,5 @@
   font-weight: 300;
   font-size: 23px;
   text-decoration: none;
+  color: #344403;
 }

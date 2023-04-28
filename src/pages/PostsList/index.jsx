@@ -31,7 +31,7 @@ export function PostsList() {
       <Link to={`/create`} className={style.buttonCreate}>
         <p> New post</p>
       </Link>
-      <p className={style.notes}> *Click on the item for details </p>
+      <p className={style.notes}> *Click for details </p>
       </div>
       <div className={style.listGrid}>
         {post.map((currentPost) => {

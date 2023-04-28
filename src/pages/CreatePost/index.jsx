@@ -55,7 +55,7 @@ export function CreatePost() {
 
         <div className={style.formItem}>
           <label>Curiosity:</label>
-          <input
+          <textarea
             name="curiosity"
             value={form.curiosity}
             onChange={handleChange}
