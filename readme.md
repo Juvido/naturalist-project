@@ -8,4 +8,4 @@ I'm a student at Ironhack, and this project is the result of Module 2 of the Web
 
 ## More information
 
-The presentation details you can find [here]().
+The presentation details you can find [here](https://prezi.com/i/2ei8a_wh5zo6/).
